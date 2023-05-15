@@ -17,6 +17,9 @@
   <img src="https://img.shields.io/github/last-commit/waxnet/GreenLog">
   <img src="https://img.shields.io/github/license/waxnet/GreenLog">
   <br>
+  <img src="https://img.shields.io/github/issues-pr/waxnet/GreenLog">
+  <img src="https://img.shields.io/github/issues-pr-closed/waxnet/GreenLog">
+  <br>
   <img src="https://img.shields.io/github/issues/waxnet/GreenLog">
   <img src="https://img.shields.io/github/issues-closed/waxnet/GreenLog">
 </p>
@@ -46,6 +49,16 @@
 **You will also need to install a few Python packages with this CMD command :**
 
 ```pip install --upgrade -r requirements.txt```
+
+-----
+
+### <p align="center">💡 Ideas 💡</p>
+<br>
+
+ * **Fix my broken English.**
+
+<br>
+<p align="center"><i><b>Feel free to submit any idea by making a pull request on this repository!</b></i></p>
 
 -----
 
