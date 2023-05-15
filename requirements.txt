@@ -1,0 +1,5 @@
+watchdog
+requests
+pystyle
+psutil
+magic
