@@ -2,7 +2,7 @@
 
 <p align= "center">
   <kbd>
-    <img  src="https://raw.githubusercontent.com/waxnet/GreenLog/main/assets/icon.png">
+    <img  src="https://raw.githubusercontent.com/waxnet/GreenLog/main/.github/workflows/image.png">
   </kbd>
 </p>
 
