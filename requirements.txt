@@ -1,3 +1,4 @@
+keyboard
 watchdog
 requests
 pystyle

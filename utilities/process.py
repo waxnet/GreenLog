@@ -1,7 +1,7 @@
 import psutil
 import time
 
-def find_process(name):
+def find_process(name): # find a process
     found_process = None
     for process in psutil.process_iter():
         if process.name() == name:
@@ -9,7 +9,7 @@ def find_process(name):
             break
     return found_process
 
-def wait_for_process(name):
+def wait_for_process(name): # wait for a process to start
     found_process = None
     while not found_process:
         time.sleep(.1)

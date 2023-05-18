@@ -1,15 +1,10 @@
 import pystyle
 
-color = pystyle.Colors.DynamicMIX((pystyle.Col.white, pystyle.Col.light_gray))
+color = pystyle.Colors.DynamicMIX((pystyle.Col.white, pystyle.Col.light_gray)) # text color
 
-def out(text):
+def out(text): # colored output
     print(pystyle.Colorate.Horizontal(color, text))
 
-def inp(text, colon = True):
-    if colon:
-        input_text = pystyle.Colorate.Horizontal(color, f"{text} :") + " "
-    else:
-        input_text = pystyle.Colorate.Horizontal(color, text)
-    
-    data = input(input_text)
+def inp(text): # colored input
+    data = input(pystyle.Colorate.Horizontal(color, f"{text} :") + " ")
     return data
