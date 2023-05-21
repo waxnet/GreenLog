@@ -1,6 +1,6 @@
+python-magic
 keyboard
 watchdog
 requests
 pystyle
 psutil
-magic
