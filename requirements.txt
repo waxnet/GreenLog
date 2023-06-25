@@ -1,7 +1,1 @@
-python-magic-bin
-python-magic
-keyboard
-watchdog
-requests
-pystyle
-psutil
+pipenv

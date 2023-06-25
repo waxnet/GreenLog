@@ -9,9 +9,9 @@ from utilities import (
 import keyboard
 import time
 
-class green_log():
+class greenlog():
     def __init__(self):
-        super(green_log, self).__init__()
+        super(greenlog, self).__init__()
         
         self.load() # setup console
         self.main() # start greenlog
@@ -31,7 +31,7 @@ class green_log():
         if mode == "y":
             # starting message
             io.out("\nStarting static dump...")
-            io.out("")
+            io.out()
 
             # clean, setup and prepare folders for dumping
             io.out("Setting up folders...")
@@ -66,7 +66,7 @@ class green_log():
         else:
             # starting message
             io.out("\nStarting dynamic dump...")
-            io.out("")
+            io.out()
 
             # request amount of seconds before starting the dumping phase
             assets_loading_process_timeout = io.inp("Enter a timeout in seconds for the assets loading process (10 min, 30 max)")
@@ -85,7 +85,7 @@ class green_log():
                     data.timeout = assets_loading_process_timeout
                 except ValueError:
                     pass
-            io.out("")
+            io.out()
             
             # kill Roblox process if running
             roblox_process = process.find_process("RobloxPlayerBeta.exe")
@@ -155,4 +155,4 @@ class green_log():
         exit(0)
 
 if __name__ == "__main__":
-    green_log()
+    greenlog()
