@@ -46,9 +46,10 @@
     • An active internet connection
     • Roblox
 
-**You will also need to install a few Python packages with this CMD command :**
+-----
 
-```pip install --upgrade -r requirements.txt```
+### <p align="center">🔑 Usage 🔑</p>
+<p align="center"><i><b>To start GreenLog run "start.cmd", it will automatically install all the requirements and setup the environment.</b></i></p>
 
 -----
 
