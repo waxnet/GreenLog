@@ -49,7 +49,10 @@
 -----
 
 ### <p align="center">🔑 Usage 🔑</p>
-<p align="center"><i><b>To start GreenLog run "start.cmd", it will automatically install all the requirements and setup the environment.</b></i></p>
+<p align="center"><i><b>
+To start GreenLog run "start.cmd" and follow the instructions on the first message,
+it will automatically install all the requirements and setup the environment.
+</b></i></p>
 
 -----
 
