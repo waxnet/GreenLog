@@ -17,7 +17,7 @@
   <img src="https://img.shields.io/github/stars/waxnet/GreenLog">
   <img src="https://img.shields.io/github/forks/waxnet/GreenLog">
   <br>
-  <img src="https://img.shields.io/github/languages/top/waxnet/GreenLog">
+  <img src="https://img.shields.io/github/downloads/waxnet/GreenLog/total.svg">
 </p>
 
 -----
