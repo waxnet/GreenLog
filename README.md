@@ -42,6 +42,16 @@ Run GreenLog, select the options you want and let the magic happen!
 
 -----
 
+### <p align="center">📜 Info 📜</p>
+<p align="center"><i><b>
+This is a complete recode of the original <a href="https://github.com/waxnet/GreenLog-OLD">GreenLog</a> in C++,
+it is around 20 times faster and has a lot more supported files. It took about a week to completely recode so
+if you think you can improove something or make the code cleaner go ahead and make a pull request. This version
+will receive a lot more updates unlike the old one since I'm pretty new to C++. <br> Have Fun!
+</b></i></p>
+
+-----
+
 ### <p align="center">💡 Ideas 💡</p>
 
     • Fix my shitty code.
