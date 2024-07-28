@@ -1,13 +1,3 @@
------
-
-<p align= "center">
-  <kbd>
-    <img  src="https://raw.githubusercontent.com/waxnet/GreenLog/main/.github/workflows/icon.png">
-  </kbd>
-</p>
-
------
-
 ### <p align="center">🐸 GreenLog 🐸</p>
 
 <p align= "center">
