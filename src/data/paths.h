@@ -14,8 +14,10 @@ namespace paths {
 	namespace greenlog {
 		// base folder
 		extern const path gBase;
-		
+
 		// temp folder
 		extern const path temp;
+		extern const path http;
+		extern const path sounds;
 	}
 }

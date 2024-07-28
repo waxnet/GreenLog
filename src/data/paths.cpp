@@ -24,5 +24,7 @@ namespace paths {
 
 		// temp folder
 		const path temp = (gBase / ".temp");
+		const path http = (gBase / "http");
+		const path sounds = (gBase / "sounds");
 	}
 }

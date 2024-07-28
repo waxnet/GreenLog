@@ -18,7 +18,7 @@ int main()
 {
     // set console title and size
     cmd::execute(new const char* [] {
-        "title GreenLog v2",
+        "title GreenLog v2.1",
         "mode con: cols=90 lines=20",
         "cls"
     }, 3);
@@ -30,12 +30,7 @@ int main()
     // ask user for static dump if roblox temp files already exist
     bool doStaticDump = false;
     if (environment::checkPath(paths::roblox::http))
-    {
         doStaticDump = (io::inp("Would you like to perform a static dump? (y, n)") == "y");
-    }
-
-    // ask user if he wants to perform a full dump
-    bool doFullDump = (io::inp("Would you like to perform a full dump? (y, n)") == "y");
 
     //// static dump
     if (doStaticDump) {
@@ -45,8 +40,9 @@ int main()
         // cleanup folders
         io::out("Setting up folders...");
         environment::cleanFolders(new std::filesystem::path[]{
-            paths::greenlog::gBase
-        }, 1);
+            paths::greenlog::http,
+            paths::greenlog::sounds
+        }, 2);
 
         // kill roblox if its already running
         DWORD robloxProcessID = process::findProcess("RobloxPlayerBeta.exe");
@@ -100,8 +96,9 @@ int main()
             paths::roblox::http,
             paths::roblox::sounds,
 
-            paths::greenlog::gBase
-        }, 3);
+            paths::greenlog::http,
+            paths::greenlog::sounds
+        }, 4);
 
         // setup file observers
         io::out("Starting file observers...");
@@ -118,7 +115,7 @@ int main()
         {
             cmd::execute(new const char* [] {
                 (
-                    "title GreenLog v2 - " +
+                    "title GreenLog v2.1 - " +
                     std::to_string(timer::time) +
                     " seconds left - " +
                     std::to_string(timer::resets) +
@@ -129,7 +126,7 @@ int main()
             timer::time--;
             std::this_thread::sleep_for(std::chrono::milliseconds(1000));
         }
-        cmd::execute(new const char* [] { "title GreenLog v2" }, 1);
+        cmd::execute(new const char* [] { "title GreenLog v2.1" }, 1);
 
         // stop file observers
         io::out("Stopping file observers...");

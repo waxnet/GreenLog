@@ -28,7 +28,7 @@ namespace magic {
 					if (stringContains(firstLine, "ID3") && stringContains(firstLine, "TSSE"))
 						return "mp3";
 
-					if (stringContains(firstLine, "OggS") && stringContains(firstLine, "vorbis"))
+					if (stringContains(firstLine, "OggS"))
 						return "ogg";
 
 					// videos

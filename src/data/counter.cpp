@@ -11,20 +11,28 @@ namespace counter {
     {
         return (counters.find(key) != counters.end());
     }
+    static std::string combineRootToKey(const std::string root, const std::string key)
+    {
+        return (root + "_" + key);
+    }
 
     // counter functions
-    void counter::increaseValue(const std::string key)
+    void counter::increaseValue(const std::string root, const std::string key)
     {
-        if (doesKeyExist(key)) {
-            counters[key] = (counters[key] + 1);
+        std::string fullKey = combineRootToKey(root, key);
+
+        if (doesKeyExist(fullKey)) {
+            counters[fullKey] = (counters[fullKey] + 1);
         } else {
-            counters[key] = 0;
+            counters[fullKey] = 0;
         }
     }
-    int counter::getValue(const std::string key)
+    int counter::getValue(const std::string root, const std::string key)
     {
-        if (doesKeyExist(key)) {
-            return counters[key];
+        std::string fullKey = combineRootToKey(root, key);
+
+        if (doesKeyExist(fullKey)) {
+            return counters[fullKey];
         } else {
             return 0;
         }
