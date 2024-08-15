@@ -11,26 +11,21 @@ namespace network {
 	// build roblox cdn url for the asset from file data
 	std::string network::buildUrl(const std::filesystem::path path)
 	{
-		if (std::filesystem::exists(path))
-		{
-			std::ifstream file(path);
-			if (file.is_open())
-			{
-				std::string firstLine;
-				if (getline(file, firstLine))
-				{
-					std::string url = "https://" + firstLine.substr(20, 2) + ".rbxcdn.com/";
+		if (!std::filesystem::exists(path))
+			return "";
 
-					for (int number = 0; number < 32; number++)
-					{
-						url += firstLine.substr((number + 34), 1);
-					}
+		std::ifstream file(path);
+		if (!file.is_open())
+			return "";
+				
+		std::string firstLine;
+		if (!getline(file, firstLine))
+			return "";
 
-					return url;
-				}
-			}
-		}
-		return "";
+		std::string url = "https://" + firstLine.substr(20, 2) + ".rbxcdn.com/";
+		for (int number = 0; number < 32; number++)
+			url += firstLine.substr((number + 34), 1);
+		return url;
 	}
 
 	// download to file

@@ -8,40 +8,40 @@ namespace magic {
 	// get the file type/extension
 	std::string magic::getFileType(const std::filesystem::path path)
 	{
-		if (std::filesystem::exists(path))
+		if (!std::filesystem::exists(path))
+			return "unknown";
+
+		std::ifstream file(path);
+		if (!file.is_open())
+			return "unknown";
+
+		std::string firstLine;
+		if (getline(file, firstLine))
 		{
-			std::ifstream file(path);
-			if (file.is_open())
-			{
-				std::string firstLine;
-				if (getline(file, firstLine))
-				{
-					// images
-					if (stringContains(firstLine, "PNG"))
-						return "png";
+			// images
+			if (stringContains(firstLine, "PNG"))
+				return "png";
 					
-					// textures
-					if (stringContains(firstLine, "KTX 11"))
-						return "ktx";
+			// textures
+			if (stringContains(firstLine, "KTX 11"))
+				return "ktx";
 
-					// audios
-					if (stringContains(firstLine, "ID3") && stringContains(firstLine, "TSSE"))
-						return "mp3";
+			// audios
+			if (stringContains(firstLine, "ID3") && stringContains(firstLine, "TSSE"))
+				return "mp3";
 
-					if (stringContains(firstLine, "OggS"))
-						return "ogg";
+			if (stringContains(firstLine, "OggS"))
+				return "ogg";
 
-					// videos
-					if (stringContains(firstLine, "webm"))
-						return "webm";
+			// videos
+			if (stringContains(firstLine, "webm"))
+				return "webm";
 
-					if (stringContains(firstLine, "matroska"))
-						return "mkv";
+			if (stringContains(firstLine, "matroska"))
+				return "mkv";
 
-					if (stringContains(firstLine, "ID3") && stringContains(firstLine, "TPE2"))
-						return "mpeg";
-				}
-			}
+			if (stringContains(firstLine, "ID3") && stringContains(firstLine, "TPE2"))
+				return "mpeg";
 		}
 
 		// if file type is not found return "unknown"
@@ -59,23 +59,22 @@ namespace magic {
 	{
 		bool foundSubstring = false;
 
-		if (std::filesystem::exists(path))
-		{
-			std::ifstream file(path);
-			if (file.is_open())
-			{
-				std::string line;
-				int counter = 0;
+		if (!std::filesystem::exists(path))
+			return foundSubstring;
 
-				while (getline(file, line) && counter < numberOfLines) {
-					if (stringContains(line, substring))
-					{
-						foundSubstring = true;
-						break;
-					}
-					counter++;
-				}
+		std::ifstream file(path);
+		if (!file.is_open())
+			return foundSubstring;
+
+		std::string line;
+		int counter = 0;
+		while (getline(file, line) && counter < numberOfLines) {
+			if (stringContains(line, substring))
+			{
+				foundSubstring = true;
+				break;
 			}
+			counter++;
 		}
 
 		return foundSubstring;

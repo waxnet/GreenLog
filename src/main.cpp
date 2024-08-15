@@ -18,7 +18,7 @@ int main()
 {
     // set console title and size
     cmd::execute(new const char* [] {
-        "title GreenLog v2.1",
+        "title GreenLog v2.2",
         "mode con: cols=90 lines=20",
         "cls"
     }, 3);
@@ -115,7 +115,7 @@ int main()
         {
             cmd::execute(new const char* [] {
                 (
-                    "title GreenLog v2.1 - " +
+                    "title GreenLog v2.2 - " +
                     std::to_string(timer::time) +
                     " seconds left - " +
                     std::to_string(timer::resets) +
@@ -126,7 +126,7 @@ int main()
             timer::time--;
             std::this_thread::sleep_for(std::chrono::milliseconds(1000));
         }
-        cmd::execute(new const char* [] { "title GreenLog v2.1" }, 1);
+        cmd::execute(new const char* [] { "title GreenLog v2.2" }, 1);
 
         // stop file observers
         io::out("Stopping file observers...");
