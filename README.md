@@ -1,4 +1,4 @@
-### <p align="center">🐸 GreenLog 🐸</p>
+# <p align="center"> GreenLog</p>
 
 <p align= "center">
   <img src="https://img.shields.io/github/last-commit/waxnet/GreenLog">
@@ -10,11 +10,11 @@
   <img src="https://img.shields.io/github/downloads/waxnet/GreenLog/total.svg">
 </p>
 
------
+---
 
-### <p align="center">🤔 Purpose 🤔</p>
+### <p align="center">Purpose</p>
 
-**With GreenLog you can extract assets such as :**
+With GreenLog you can extract assets such as :
 
     • Images (png)
     • Textures (ktx)
@@ -22,40 +22,32 @@
     • Videos (webm, mkv, mpeg)
     • Other (txt)
 
-**From any <a href="https://www.roblox.com/home">Roblox</a> game!**
+From any **<a href="https://www.roblox.com/home">Roblox</a>** game!
 
------
+---
 
-### <p align="center">🔑 Usage 🔑</p>
-<p align="center"><i><b>
+### <p align="center">Usage</p>
+<p align="center"><i>
 Run GreenLog, select the options you want and let the magic happen!
-</b></i></p>
+</i></p>
 
------
+---
 
-### <p align="center">📜 Info 📜</p>
-<p align="center"><i><b>
+### <p align="center">Info</p>
+<p align="center"><i>
 This is a complete recode of the original GreenLog in C++,
 it is around 20 times faster and has a lot more supported files.
 It took about a week to completely recode so if you think you can
 improove something or make the code cleaner go ahead and make a pull
 request. This version will receive a lot more updates unlike the old
 one since I'm pretty new to C++. <br> Have Fun!
-</b></i></p>
+</i></p>
 
------
+---
 
-### <p align="center">💡 Ideas 💡</p>
+### <p align="center">Disclaimer</p>
 
-    • Fix my shitty code.
-
-<p align="center"><i><b>Feel free to submit any idea by making a pull request on this repository!</b></i></p>
-
------
-
-### <p align="center">⚠️ Disclaimer ⚠️</p>
-
-<p align="center"><i><b>This program is meant for educational purposes only.</b></i></p>
+<p align="center"><i>This program is meant for educational purposes only.</i></p>
 
 -----
 
